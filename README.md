@@ -71,3 +71,14 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Running Postgres / pgAdmin in docker.
+
+#Start docker container
+docker-compose up -d
+
+# Connecting pgAdmin to postgress running container
+docker inspect postgres
+
+Look for "IPAddress": "xxx.xx.x.x"
+Use the address in pgadmin or db viewer.
