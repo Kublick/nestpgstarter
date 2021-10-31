@@ -7,7 +7,6 @@ import {
   Post,
   Req,
   Res,
-  SerializeOptions,
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
@@ -20,9 +19,6 @@ import JwtAuthenticationGuard from './jwt-authentication.guard';
 
 @Controller('authentication')
 @UseInterceptors(ClassSerializerInterceptor)
-@SerializeOptions({
-  strategy: 'excludeAll',
-})
 export class AuthenticationController {
   constructor(private readonly authenticationService: AuthenticationService) {}
 

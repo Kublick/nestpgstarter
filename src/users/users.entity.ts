@@ -16,6 +16,9 @@ class User {
 
   @Column()
   public password: string;
+
+  @Column({ nullable: true })
+  public category?: string;
 }
 
 export default User;
