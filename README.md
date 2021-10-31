@@ -75,10 +75,13 @@ Nest is [MIT licensed](LICENSE).
 ## Running Postgres / pgAdmin in docker.
 
 #Start docker container
+```bash
 docker-compose up -d
-
+```
 # Connecting pgAdmin to postgress running container
+```bash
 docker inspect postgres
 
 Look for "IPAddress": "xxx.xx.x.x"
+```
 Use the address in pgadmin or db viewer.
